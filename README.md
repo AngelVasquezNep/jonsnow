@@ -2,7 +2,6 @@
 
 El mejor dominio de now.sh
 
--------
 ## Descripción
 
 Como todo fan de **GOT** me agrada Jon Snow, así que cuando se me ocurrio la idea de montar un sitio web combinando el servicio que ofrece [NOW](https://zeit.co) y termino como [jons.now.sh](https://jons.now.sh).
