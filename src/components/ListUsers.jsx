@@ -1,6 +1,6 @@
 import React from 'react'
 import User from './User';
-
+import './users.css'
 
 class ListUsers extends React.Component {
 
@@ -24,7 +24,11 @@ class ListUsers extends React.Component {
               if (!user.pageRank) {
                 console.log(1)
               } else if (user.pageRank > this.props.rank) {
-                return <User image = { `https://api.got.show/${user.imageLink}`} name = {user.name} key = {index} />
+                return <User 
+                        image = { `https://api.got.show/${user.imageLink}`} 
+                        name = {user.name} 
+                        key = {index} 
+                        />
               }
             }) 
         }

@@ -58,7 +58,7 @@ class App extends Component {
               handleChange = { this.handleChange }
             /> */}
         {/* <User/> */}
-          <ListUsers users = {this.state.characters} rank = {250} />
+          <ListUsers users = {this.state.characters} rank = {100} />
 
 
       </div>

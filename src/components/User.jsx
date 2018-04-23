@@ -6,7 +6,7 @@ const User = props => {
   return (
     <div className="User">
       {
-        props.image ? (
+        props.image !== 'https://api.got.show/undefined' ? (
           <img src={props.image} alt= {props.name} />
         ) : (
           <img src={imageNotFount} alt="Not Found"/>
