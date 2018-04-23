@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Buscador from './components/Buscador'
 import Barra from './components/BarraRank'
 import User from './components/User'
+import ListUsers from './components/ListUsers'
 
 class App extends Component {
   
@@ -56,8 +57,10 @@ class App extends Component {
               max = { 300 }
               handleChange = { this.handleChange }
             /> */}
-            <User/>
-          
+        {/* <User/> */}
+          <ListUsers users = {this.state.characters} rank = {250} />
+
+
       </div>
     );
   }
