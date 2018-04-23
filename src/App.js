@@ -2,40 +2,60 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header'
 import Buscador from './components/Buscador'
+import Barra from './components/BarraRank'
 
 class App extends Component {
   
   state = {
-    value: ''
+    value: '',
+    characters: {}
   }
 
-  handleClick = (e) => {
-    e.preventDefault()
-    console.log(this.buscadorValue.value)
-    this.setState({
-      value: ''
+  componentDidMount () {
+    fetch('https://api.got.show/api/characters')
+    .then(res => res.json())
+    .then(json => {
+      this.setState({
+        characters: json
+      })
     })
   }
 
-  refBuscador = element => {
-    this.buscadorValue = element
+  // handleClick = (e) => {
+  //   e.preventDefault()
+  // }
+
+  // refBuscador = element => {
+  //   this.buscadorValue = element
+  // }
+
+  // changeValue = element => {
+  //   this.setState({
+  //     value: element.target.value
+  //   })
+  // }
+
+  handleChange = element => {
+    console.log(element.target.value)
   }
 
-  changeValue = value => {
-    this.setState({
-      value: value
-    })
-  }
   render() {
     return (
       <div className="App">
         {/* <Header/> */}
-        <Buscador 
+        {/* <Buscador 
               changeValue = { this.changeValue }
               refBuscador = { this.refBuscador }
               handleClick = { this.handleClick } 
               value= {this.state.value}
-              />
+              /> */}
+        {/* <Barra
+              defaultValue = { 250 }
+              min = { 0 }
+              max = { 300 }
+              handleChange = { this.handleChange }
+            /> */}
+            
       </div>
     );
   }
