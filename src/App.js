@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header'
-import Buscador from './components/Buscador'
+// import Buscador from './components/Buscador'
 import Barra from './components/BarraRank'
-import User from './components/User'
 import ListUsers from './components/ListUsers'
 
 class App extends Component {
   
   state = {
     value: '',
-    characters: {}
+    rankBarra: 300,
+    characters: {},
+    selectedCharacter: {}
   }
 
   componentDidMount () {
@@ -37,31 +38,32 @@ class App extends Component {
   //   })
   // }
 
-  handleChange = element => {
-    console.log(element.target.value)
+  handleChangeBarra = element => {
+    this.setState({
+      rankBarra: element.target.value
+    })
   }
 
   render() {
     return (
-      <div className="App">
-        {/* <Header/> */}
-        {/* <Buscador 
-              changeValue = { this.changeValue }
-              refBuscador = { this.refBuscador }
-              handleClick = { this.handleClick } 
-              value= {this.state.value}
+        <div className="App">
+          <Header/>
+          {/* <Buscador 
+                changeValue = { this.changeValue }
+                refBuscador = { this.refBuscador }
+                handleClick = { this.handleClick } 
+                value= {this.state.value}
               /> */}
-        {/* <Barra
-              defaultValue = { 250 }
-              min = { 0 }
-              max = { 300 }
-              handleChange = { this.handleChange }
-            /> */}
-        {/* <User/> */}
-          <ListUsers users = {this.state.characters} rank = {100} />
+          <Barra
+                min = { 0 }
+                max = { 300 }
+                rank = { this.state.rankBarra }
+                handleChange = { this.handleChangeBarra }
+                value = { this.state.rankBarra }
+              />
+          <ListUsers users = {this.state.characters} rank = {this.state.rankBarra} />
 
-
-      </div>
+        </div>
     );
   }
 }

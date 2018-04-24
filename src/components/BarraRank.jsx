@@ -1,4 +1,5 @@
 import React from 'react'
+import './barraRank.css'
 
 const Barra = (props) => {
   return (
@@ -7,7 +8,7 @@ const Barra = (props) => {
       <input type="range"
         min = { props.min }
         max = { props.max }
-        defaultValue = {props.defaultValue}
+        value = { props.value }
         onChange = { props.handleChange }
       />
     </div>

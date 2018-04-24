@@ -1,0 +1,6 @@
+.Barra {
+  background-color: aqua;
+  display: grid;
+  text-align: center;
+  padding: 20px 0;
+}

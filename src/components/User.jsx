@@ -13,10 +13,16 @@ const User = props => {
         )
       }
       <h3> { props.name || 'Not name' } </h3>
-      <Boton
-        typeBoton = 'boton'
-        text = 'More'
-      />
+      {
+        props.showBoton === false ? (
+          null
+        ) : (
+          <Boton
+          typeBoton = 'boton'
+          text = 'More'
+          />
+        )
+      }
     </div>
   )
 }

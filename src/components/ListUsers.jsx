@@ -1,6 +1,7 @@
 import React from 'react'
-import User from './User';
+// import User from './User';
 import './users.css'
+import UserFull from './UserFull';
 
 class ListUsers extends React.Component {
 
@@ -9,7 +10,6 @@ class ListUsers extends React.Component {
   }
 
   componentWillReceiveProps (props) {
-    console.log(props)
     this.setState({
       users: props.users
     })
@@ -21,12 +21,13 @@ class ListUsers extends React.Component {
       <div className="ListUsers">
         {
             this.state.users.map( (user,index) => {
-              if (!user.pageRank) {
-                console.log(1)
-              } else if (user.pageRank > this.props.rank) {
-                return <User 
-                        image = { `https://api.got.show/${user.imageLink}`} 
-                        name = {user.name} 
+              if (user.pageRank >= this.props.rank) {
+                // return <User 
+                //         image = { `https://api.got.show/${user.imageLink}`} 
+                //         name = {user.name} 
+                //         key = {index} 
+                //         />
+                return <UserFull {...user} 
                         key = {index} 
                         />
               }
