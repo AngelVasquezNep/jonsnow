@@ -11,7 +11,8 @@ class App extends Component {
     value: '',
     rankBarra: 300,
     characters: {},
-    selectedCharacter: {}
+    selectedCharacter: {},
+    totalElemenetosLista: 0
   }
 
   componentDidMount () {
@@ -60,8 +61,11 @@ class App extends Component {
                 rank = { this.state.rankBarra }
                 handleChange = { this.handleChangeBarra }
                 value = { this.state.rankBarra }
-              />
-          <ListUsers users = {this.state.characters} rank = {this.state.rankBarra} />
+                />
+          <ListUsers 
+                users = { this.state.characters } 
+                rank = { this.state.rankBarra } 
+                />
 
         </div>
     );
