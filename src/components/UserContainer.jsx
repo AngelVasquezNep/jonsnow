@@ -5,12 +5,14 @@ import User from './User';
 
 class UserContainer extends Component {
   state = {
-    userFull: false
+    userFull: false,
+    text: 'More'
   }
 
   handleClickUser = () => {
     this.setState({
-      userFull: !this.state.userFull
+      userFull: !this.state.userFull,
+      text: this.state.userFull ? 'More' : 'Less'
     })
   }
 
@@ -20,11 +22,13 @@ class UserContainer extends Component {
           {
             !this.state.userFull ? (
                 <User
+                  text = {this.state.text }
                   handleClick = {this.handleClickUser}
                   {...this.props}
                   />
                 ) : (
                 <UserFull 
+                  text = {this.state.text }
                   handleClick = {this.handleClickUser}
                   {...this.props}
                 />

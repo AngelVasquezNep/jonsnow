@@ -20,7 +20,7 @@ const User = props => {
           <Boton
           handleClick = {props.handleClick}
           typeBoton = 'boton'
-          text = 'More'
+          text = {props.text || ''}
           />
         )
       }

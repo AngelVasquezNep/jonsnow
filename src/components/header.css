@@ -3,4 +3,9 @@
   justify-content: center;
   text-align: center;
   background-color: #f1f1f1;
+  color: #313131;
+}
+
+.Header span {
+  font-size: 1.3em;
 }
