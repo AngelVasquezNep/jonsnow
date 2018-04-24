@@ -6,9 +6,10 @@ function Header (props) {
   return (
     <div className="Header">
       <h1 className="Header-title">Jon Snow</h1>
-      <figure className="Header-img">
-        <img src= { jonsnowImage } alt="Jon Snow"/>
-      </figure>
+      <img className="Header-img" 
+           src= { jonsnowImage } 
+           alt="Jon Snow"
+           />
     </div>
   )
 }

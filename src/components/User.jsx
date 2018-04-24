@@ -18,6 +18,7 @@ const User = props => {
           null
         ) : (
           <Boton
+          handleClick = {props.handleClick}
           typeBoton = 'boton'
           text = 'More'
           />

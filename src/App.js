@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import Header from './components/Header'
 // import Buscador from './components/Buscador'
 import Barra from './components/BarraRank'

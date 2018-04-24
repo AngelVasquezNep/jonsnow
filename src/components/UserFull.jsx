@@ -4,8 +4,9 @@ import User from './User'
 const UserFull = (props) => {
   return (
     <div className="UserFull">
-      <User 
-          showBoton = {false} 
+      <User
+          handleClick = { props.handleClick }
+          showBoton = {true} 
           image = {`https://api.got.show/${props.imageLink}`}
           name = { props.name }
           />

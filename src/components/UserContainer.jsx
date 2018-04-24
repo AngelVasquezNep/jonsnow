@@ -8,16 +8,24 @@ class UserContainer extends Component {
     userFull: false
   }
 
+  handleClickUser = () => {
+    this.setState({
+      userFull: !this.state.userFull
+    })
+  }
+
   render () {
     return (
       <div>
           {
             !this.state.userFull ? (
-                <User 
+                <User
+                  handleClick = {this.handleClickUser}
                   {...this.props}
                   />
                 ) : (
                 <UserFull 
+                  handleClick = {this.handleClickUser}
                   {...this.props}
                 />
               )
