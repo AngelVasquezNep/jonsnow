@@ -1,7 +1,13 @@
-.ListUsers {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
-  grid-gap: 10px;
-  justify-content: center;
-  margin: 10px 0;
+.User {
+  transition: all 1s;
+  animation: apper 1.5s;
+}
+
+@keyframes apper {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100%;
+  }
 }

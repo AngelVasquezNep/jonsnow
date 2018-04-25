@@ -1,6 +1,7 @@
 import React from 'react'
 import Boton from './Boton'
 import imageNotFount from '../assets/imageNotFound.jpg'
+import './users.css'
 
 const User = props => {
   return (

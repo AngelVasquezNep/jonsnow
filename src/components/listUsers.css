@@ -1,0 +1,8 @@
+.ListUsers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-gap: 10px;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #f8f8f8;
+}
