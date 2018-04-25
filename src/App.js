@@ -3,6 +3,7 @@ import Header from './components/Header'
 // import Buscador from './components/Buscador'
 import Barra from './components/BarraRank'
 import ListUsers from './components/ListUsers'
+import Footer from './components/Footer'
 
 class App extends Component {
   
@@ -65,7 +66,7 @@ class App extends Component {
                 users = { this.state.characters } 
                 rank = { this.state.rankBarra } 
                 />
-
+          <Footer/>
         </div>
     );
   }
