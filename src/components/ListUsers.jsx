@@ -12,13 +12,19 @@ class ListUsers extends React.Component {
 
   componentWillReceiveProps (props) {
     this.setState({
-      users: props.users,
-      loading: false
+      loading: true
+    })
+    setTimeout(()=>{
+      this.setState({
+        loading: false
+      })
+    }, 500)
+    this.setState({
+      users: props.users
     })
   }
 
   render () {
-
     return (
       <div className="ListUsers">
         {
