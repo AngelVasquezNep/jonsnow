@@ -1,16 +1,19 @@
 import React from 'react'
 import './users.css'
 import UserContainer from './UserContainer';
+import Spinner from './Sppiner'
 
 class ListUsers extends React.Component {
 
   state = {
-    users: []
+    users: [],
+    loading: true
   }
 
   componentWillReceiveProps (props) {
     this.setState({
-      users: props.users
+      users: props.users,
+      loading: false
     })
   }
 
@@ -19,8 +22,8 @@ class ListUsers extends React.Component {
     return (
       <div className="ListUsers">
         {
-            this.state.users === [] && this.state.users[0] !== [] ? (
-              console.log("GARGANDO")
+            this.state.loading ? (
+              <Spinner/>
             ) : (
               this.state.users.map( (user,index) => {
                 if (user.pageRank >= this.props.rank) {

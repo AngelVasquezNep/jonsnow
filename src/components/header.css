@@ -9,3 +9,9 @@
 .Header span {
   font-size: 1.3em;
 }
+
+@media screen and (max-width: 600px) {
+  .Header-title {
+    font-size: 22px;
+  }
+}

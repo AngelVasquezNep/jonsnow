@@ -4,7 +4,7 @@ import './barraRank.css'
 const Barra = (props) => {
   return (
     <div className="Barra">
-      <span>Rank: { props.rank || 0 } </span>
+      <span>Minimum range of characters: { props.rank || 0 } </span>
       <input type="range"
         min = { props.min }
         max = { props.max }
